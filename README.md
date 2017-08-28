@@ -1,6 +1,35 @@
-# ProspaSmbLoanSystem
+# Prospa Loan App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
+
+### Prerequisites
+
+Make sure you have Node version >= 5.0 and NPM >= 3.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+
+#### Install yarn
+You must also have the package manager yarn installed. You can download the installer from https://yarnpkg.com/en/docs/install or run the command:
+```
+npm install -g yarn
+```
+
+### Clone `Prospa Loan App`
+
+You need git to clone the `prospaApp` repository. You can get git from [http://git-scm.com/](http://git-scm.com/).
+
+Clone the `prospaApp` repository using **git**:
+
+```
+git clone https://github.com/sdmels-assignment/prospaApp.git
+```
+
+### Install Dependencies
+
+In order to install project dependencies you can simply run command:
+
+```
+cd prospaApp
+yarn install
+```
 
 ## Development server
 
