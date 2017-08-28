@@ -2,6 +2,9 @@
 /*https://jsfiddle.net/9pzkmf68/3/*/
 /*https://css-tricks.com/custom-interactive-range-inputs/*/
 
+
+$slider-thumb: '/assets/icons/prospa-dollar-icon.svg';
+
 label {
   height: 20px;
   font-family: Arial;
@@ -22,13 +25,13 @@ input[type=range] {
   width: 431px;
   border: none;
   background-color: inherit;
-  box-shadow: none; 
+  box-shadow: none;
   padding: 0;
 }
 
 input[type=range]:focus {
   outline: none;
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -48,14 +51,13 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -10px;
 
-  background-image:url('/assets/icons/prospa-dollar-icon.svg');
+  background-image:url($slider-thumb);
   background-size: 30px 30px;
-  background-position: 0px 0px;
+  background-position: 0 0;
   background-repeat: no-repeat;
-  background-color:transparent;    
   background-color: #ffffff;
 
-  box-shadow: -431px 0 0 431px #8bc34a;
+  box-shadow: -431px 12px 0 431px #8bc34a;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
@@ -77,7 +79,7 @@ input[type=range]::-moz-range-track {
   animate: 0.2s;
   background: #b0bec5;
   border: 1px solid #b0bec5;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 input[type=range]::-moz-range-thumb {
   height: 30px;
@@ -85,11 +87,11 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
-  background-image:url('/assets/icons/prospa-dollar-icon.svg');
+  background-image:url($slider-thumb);
   background-size: 30px 30px;
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  background-color:transparent;    
+  background-color:transparent;
   background-color: #ffffff;
 }
 
@@ -110,23 +112,23 @@ input[type=range]::-ms-thumb {
   width: 30px;
   border-radius: 50%;
   cursor: pointer;
-  background-image:url('/assets/icons/prospa-dollar-icon.svg');
+  background-image:url($slider-thumb);
   background-size: 30px 30px;
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  background-color:transparent;    
+  background-color:transparent;
   background-color: #ffffff;
 }
 
 input[type=range]::-ms-fill-lower, input[type=range]:focus::-ms-fill-lower {
   background: #8bc34a;
   border-radius: 10px;
-  border: 0.2px solid #b0bec5;  
+  border: 0.2px solid #b0bec5;
 }
 input[type=range]::-ms-fill-upper, input[type=range]:focus::-ms-fill-upper {
   background: #b0bec5;
   border-radius: 10px;
-  border: 0.2px solid #b0bec5;  
+  border: 0.2px solid #b0bec5;
 }
 
 .prospa-loan-range-list {
