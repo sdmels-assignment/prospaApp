@@ -11,10 +11,11 @@ export class LoanRepaymentPanelComponent implements OnInit {
   public repaymentNumbers: number;
   public loanAmount;
   public duration;
-  constructor(private _repaymentCalculationService: RepaymentCalculationService) { }
+  constructor(private _repaymentCalculationService: RepaymentCalculationService) {
+    this.updateTotalRepayment();
+  }
 
   ngOnInit() {
-    this.updateTotalRepayment();
     this.updateLoanAmountAndDuration();
   }
 
