@@ -1,0 +1,23 @@
+label {
+    height: 20px;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: left;
+    color: #455a64;
+    margin-bottom: 11px;
+    }
+  
+.form-group {
+    margin-bottom: 30px;
+}   
+
+
+input.ng-invalid {
+    border-left: 5px solid red;
+}
+
+input.ng-valid {
+    border-left: 5px solid green;
+}
+

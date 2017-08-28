@@ -1,0 +1,153 @@
+/*https://stackoverflow.com/questions/18389224/how-to-style-html5-range-input-to-have-different-color-before-and-after-slider*/
+/*https://jsfiddle.net/9pzkmf68/3/*/
+/*https://css-tricks.com/custom-interactive-range-inputs/*/
+
+label {
+  height: 20px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: left;
+  color: #455a64;
+  margin-bottom: 11px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  overflow: hidden;
+  width: 431px;
+  border: none;
+  background-color: inherit;
+  box-shadow: none; 
+  padding: 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+  box-shadow: none; 
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 431px;
+  height: 12px;
+  cursor: pointer;
+  animate: 0.2s;
+  background-color: #b0bec5;
+  border-radius: 10px;
+  border: 0.2px solid #b0bec5;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+
+  background-image:url('/assets/icons/prospa-dollar-icon.svg');
+  background-size: 30px 30px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-color:transparent;    
+  background-color: #ffffff;
+
+  box-shadow: -431px 0 0 431px #8bc34a;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #b0bec5;
+}
+
+/*FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #8bc34a;
+  height: 12px;
+  border: 1px solid #8bc34a;
+  border-radius: 10px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 431px;
+  height: 12px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #b0bec5;
+  border: 1px solid #b0bec5;
+  border-radius: 10px;  
+}
+input[type=range]::-moz-range-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  background-image:url('/assets/icons/prospa-dollar-icon.svg');
+  background-size: 30px 30px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-color:transparent;    
+  background-color: #ffffff;
+}
+
+/*IE*/
+input[type=range]::-ms-track {
+  width: 431px;
+  height: 12px;
+  cursor: pointer;
+  animate: 0.2s;
+  color: transparent;
+  background-color: #b0bec5;
+  border-radius: 10px;
+  border: 0.2px solid #b0bec5;
+}
+
+input[type=range]::-ms-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image:url('/assets/icons/prospa-dollar-icon.svg');
+  background-size: 30px 30px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-color:transparent;    
+  background-color: #ffffff;
+}
+
+input[type=range]::-ms-fill-lower, input[type=range]:focus::-ms-fill-lower {
+  background: #8bc34a;
+  border-radius: 10px;
+  border: 0.2px solid #b0bec5;  
+}
+input[type=range]::-ms-fill-upper, input[type=range]:focus::-ms-fill-upper {
+  background: #b0bec5;
+  border-radius: 10px;
+  border: 0.2px solid #b0bec5;  
+}
+
+.prospa-loan-range-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.prospa-loan-range-list li {
+  display: inline-block;
+  height: 16px;
+  font-family: Arial;
+  font-size: 14px;
+  color: #5a666e;
+  padding: 0 20px;
+}
+
+.prospa-loan-range-list li:first-child {
+  padding-left: 0;
+}
+
+.prospa-loan-range-list li:last-child {
+  padding-right: 0;
+  float: right;
+}

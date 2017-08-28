@@ -1,0 +1,56 @@
+label {
+  height: 20px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: left;
+  color: #455a64;
+  margin-bottom: 11px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}  
+  
+.prospa-loan-repayment-panel{
+  height: 281px;
+  border-radius: 6px;
+  border: solid 1px #cfd8dc;
+}
+
+.panel-body {
+  padding: 10px;
+}
+
+.prospa-panel-title {
+  height: 22px;
+  font-family: Arial;
+  line-height: 1.57;
+  letter-spacing: 0.3px;
+  color: #455a64;
+}
+
+.prospa-loan-repayment-details {
+  margin: 25px 0 34px 0;
+}
+
+.prospa-loan-repayment-details .prospa-loan-repayment-column{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #5a666e;
+}
+
+.prospa-loan-repayment-footnote {
+  font-family: Arial;
+  font-size: 10px;
+  line-height: 1.8;
+  color: #5b666d;
+  margin: 0 10px 8px 10px;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #5a666e;
+  text-decoration: underline;
+}

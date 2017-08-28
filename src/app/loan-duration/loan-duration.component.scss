@@ -1,0 +1,22 @@
+label {
+  height: 20px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: left;
+  color: #455a64;
+  margin-bottom: 11px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+.prospa-loan-duration-item {
+  width: 44px;
+  height: 44px;
+  border: solid 1px #cfd8dc;  
+}
+
+.prospa-loan-duration-item.active {
+  background-color: #8bc34a
+}

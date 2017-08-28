@@ -1,0 +1,6 @@
+{
+  "/api/*": {
+    "target": "http://www.mocky.io/v2/5955dc852900001e01cd70b7",
+    "secure": false
+  }
+}

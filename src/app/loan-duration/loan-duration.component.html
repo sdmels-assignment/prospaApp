@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label for="loanDuration">How long do you want the loan for (in months)?</label>
+    <div class="btn-group"           
+          role="group" 
+          aria-label="loan term group">
+      <button tyle="button" 
+              *ngFor="let duration of durations" 
+              (click)="onSelectDuration(duration, $event)"
+              [class.active]="duration === selectedDuration"
+              class="btn btn-default prospa-loan-duration-item">{{duration}}</button>
+    </div>              
+  </div>
