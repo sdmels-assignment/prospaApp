@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RepaymentCalculationService } from '../repayment-calculation.service';
 
 @Component({
@@ -8,22 +8,30 @@ import { RepaymentCalculationService } from '../repayment-calculation.service';
 })
 export class LoanRepaymentPanelComponent implements OnInit {
 
-  private repaymentNumbers: number;
-
+  public repaymentNumbers: number;
+  public loanAmount;
+  public duration;
   constructor(private _repaymentCalculationService: RepaymentCalculationService) { }
 
   ngOnInit() {
     this.updateTotalRepayment();
+    this.updateLoanAmountAndDuration();
   }
 
   updateTotalRepayment() {
     this._repaymentCalculationService.getTotalRepaymentInDaysEmitter()
       .subscribe( (repaymentNumber) => {
         this.repaymentNumbers = repaymentNumber;
+        this.updateLoanAmountAndDuration();
       });
   }
 
-  getRepmentAmount() {
+  getRepaymentAmount() {
     return this._repaymentCalculationService.getDailyRepayment();
+  }
+
+  updateLoanAmountAndDuration() {
+    this.loanAmount = this._repaymentCalculationService.getLoanAmount();
+    this.duration = this._repaymentCalculationService.getDuration();
   }
 }

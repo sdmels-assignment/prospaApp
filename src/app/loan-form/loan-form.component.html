@@ -1,7 +1,8 @@
 <form #prospaLoanForm="ngForm" class="prospa-loan-form" (ngSubmit)="onSubmit(prospaLoanForm.value)" novalidate>
   <prospa-loan-slider [min]="5000" [max]="250000" [step]="5000" [defaultValue]="30000"></prospa-loan-slider>
 
-  <prospa-loan-duration [durations]="getDurationRange()" (onDurationChanged)="updateRate($event)"></prospa-loan-duration>
+  <prospa-loan-duration [durations]="getDurationRange()"
+                        (onDurationChanged)="updateRate($event)"></prospa-loan-duration>
 
   <prospa-loan-repayment-panel></prospa-loan-repayment-panel>
 
@@ -12,13 +13,10 @@
 
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" class="form-control" 
-    ngPattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-    ngModel id="email" 
+    <input type="email" class="form-control"
+    ngModel id="email"
     name="email" required>
   </div>
-
-  <!-- <prospa-personal-details></prospa-personal-details>        -->
 
   <button type="submit" class="btn btn-default pull-right prospa-loan-submit-button"><span>Submit</span></button>
 </form>

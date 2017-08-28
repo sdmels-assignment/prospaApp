@@ -9,8 +9,7 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class DurationAndInterestRateServiceService {
-  // private _url: String = 'http://www.mocky.io/v2/5955dc852900001e01cd70b7';
-  private _url: string = 'http://www.mocky.io/v2/5955dc852900001e01cd70b7';
+  private _url = 'http://www.mocky.io/v2/5955dc852900001e01cd70b7';
 
   constructor(private _http: Http) { }
 

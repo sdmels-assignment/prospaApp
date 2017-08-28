@@ -11,7 +11,7 @@ export class LoanDurationComponent implements OnInit {
   @Input() durations;
   @Output() onDurationChanged = new EventEmitter();
 
-  private selectedDuration: number;
+  public selectedDuration: number;
   constructor(private _repaymentCalculationService: RepaymentCalculationService) { }
 
   ngOnInit() {
@@ -23,10 +23,8 @@ export class LoanDurationComponent implements OnInit {
     if (event) {
       event.preventDefault();
     }
-    // console.log(event.preventDefault());
     this.selectedDuration = duration;
     this._repaymentCalculationService.setDuration(duration);
     this.onDurationChanged.emit(duration);
   }
-
 }

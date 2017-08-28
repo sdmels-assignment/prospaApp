@@ -9,11 +9,8 @@ import { RepaymentCalculationService } from '../repayment-calculation.service';
   styleUrls: ['./loan-form.component.scss']
 })
 export class LoanFormComponent implements OnInit {
-
   public durationAndInterests = [];
   public errorMsg: String;
-  public requiredLoanAmount;
-  public selectedDurationAndRate: any;
 
   constructor(private _durationAndInterestRateService: DurationAndInterestRateServiceService,
     private _repaymentCalculationService: RepaymentCalculationService,
@@ -25,8 +22,8 @@ export class LoanFormComponent implements OnInit {
 
   getDurationAndInterestRate() {
     this._durationAndInterestRateService.getDurationAndInterestRates()
-    .subscribe(successResponseData => this.durationAndInterests = successResponseData, 
-      errorResponseData => this.errorMsg = errorResponseData);
+      .subscribe(successResponseData => this.durationAndInterests = successResponseData,
+          errorResponseData => this.errorMsg = errorResponseData);
   }
 
   getDurationRange() {
@@ -35,9 +32,7 @@ export class LoanFormComponent implements OnInit {
 
   updateRate(duration) {
     const rateForSelectedDuration = this.durationAndInterests
-      .filter((durationAndRate) => {
-        return durationAndRate.duration === duration;
-      });
+      .filter( durationAndRate => durationAndRate.duration === duration);
 
     if (rateForSelectedDuration.length === 0) {
       this._repaymentCalculationService.setRate(0);
@@ -46,8 +41,7 @@ export class LoanFormComponent implements OnInit {
     }
   }
 
-  onSubmit(formPersonalData){
-    console.log(this);
+  onSubmit(formPersonalData) {
     this._applicationService.submit(formPersonalData);
   }
 }

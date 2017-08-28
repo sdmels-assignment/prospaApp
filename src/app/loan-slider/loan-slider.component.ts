@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RepaymentCalculationService } from '../repayment-calculation.service';
 
 @Component({
@@ -11,8 +11,6 @@ export class LoanSliderComponent implements OnInit {
   @Input() max: Number;
   @Input() step: Number;
   @Input() defaultValue: Number;
-
-  private loanAmountRequested: Number;
 
   constructor(private _repaymentCalculationService: RepaymentCalculationService) { }
 

@@ -1,17 +1,17 @@
 <div class="form-group panel panel-default prospa-loan-repayment-panel">
   <div class="panel-body text-center">
-    <h5 class="prospa-panel-title">$30,000 over 12 months will approximately equate to:</h5>
+    <h5 class="prospa-panel-title">{{loanAmount | currency:'USD':true }} over {{duration}} months will approximately equate to:</h5>
     <div class="row prospa-loan-repayment-details">
       <div class="col-md-6 col-xs-6 col-sm-6 prospa-loan-repayment-column">
-        {{repaymentNumbers}} <br/>daily repayments 
+        {{ repaymentNumbers }} <br/>daily repayments
       </div>
       <div class="col-md-6 col-xs-6 col-sm-6 prospa-loan-repayment-column">
-        {{getRepmentAmount() | currency:'USD':true}} <br/>per day
+        {{getRepaymentAmount() | currency:'USD':true}} <br/>per day
       </div>
     </div>
     <p class="prospa-loan-repayment-footnote">When we calculate your exact rate, we take into account a number of factors including our assessment on the strength of your business. This calculation is an estimate only. Conditions apply to all loan options and to full or partial repayments. Fees and charges also apply and are subject to change. Applications are subject to approval and full terms and conditions will be in the loan offer.</p>
       <p class="prospa-loan-repayment-footnote">
-        <a href="#">Connect your bank statements</a> for a more accurate result 
+        <a href="/">Connect your bank statements</a> for a more accurate result
       </p>
   </div>
 </div>

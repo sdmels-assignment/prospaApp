@@ -3,7 +3,6 @@ import { RepaymentCalculationService } from './repayment-calculation.service';
 
 @Injectable()
 export class ApplicationService {
-  
   private application: Object= {};
   constructor(private _repaymentCalculationService: RepaymentCalculationService) { }
 
@@ -14,13 +13,11 @@ export class ApplicationService {
     this.application['repayment'] = this._repaymentCalculationService.getDailyRepayment();
 
     this._repaymentCalculationService.getTotalRepaymentInDaysEmitter()
-    .subscribe( (repaymentNumber) => {
-      this.application['totalRepayment'] = repaymentNumber;
-    });
+    .subscribe( repaymentNumber => this.application['totalRepayment'] = repaymentNumber);
 
   }
 
-  updateApplicationPersoanlDetails(persoanlData) {
+  updateApplicationPersonalDetails(persoanlData) {
     this.application['fullName'] = persoanlData.fullName;
     this.application['email'] = persoanlData.email;
   }
@@ -31,8 +28,9 @@ export class ApplicationService {
     }
 
     this.updateApplicationLoanDetails();
-    this.updateApplicationPersoanlDetails(formData);
+    this.updateApplicationPersonalDetails(formData);
 
+    // [TODO: DS] Need to hook with backend service
     console.log(this.application);
   }
 

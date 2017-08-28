@@ -1,5 +1,4 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
 
@@ -10,7 +9,7 @@ export class RepaymentCalculationService {
   public loanAmount: number;
   public rate: number;
   public duration: number;
-  public totalReplaymentInDays: EventEmitter<number> = new EventEmitter();
+  public totalRepaymentInDays: EventEmitter<number> = new EventEmitter();
 
   getLoanAmount(): number {
     return this.loanAmount;
@@ -30,12 +29,12 @@ export class RepaymentCalculationService {
 
   setRate(rate) {
     this.rate = rate;
-    this.calcuateTotalRepayment();
+    // this.calculateTotalRepayment();
   }
 
   setDuration(duration) {
     this.duration = duration;
-    this.calcuateTotalRepayment();
+    this.calculateTotalRepayment();
   }
 
   getDailyRepayment() {
@@ -46,16 +45,16 @@ export class RepaymentCalculationService {
     return this.getLoanAmount() * dailyRate;
   }
 
-  calcuateTotalRepayment() {
+  calculateTotalRepayment() {
     let totalRepayment = 0;
-    if (!!this.getRate()) {
+    if (this.getDuration() !== undefined) {
       totalRepayment = this.getRepaymentFrequency(this.getDuration());
     }
-    this.totalReplaymentInDays.emit(totalRepayment);
+    this.totalRepaymentInDays.emit(totalRepayment);
   }
 
   getTotalRepaymentInDaysEmitter() {
-    return this.totalReplaymentInDays;
+    return this.totalRepaymentInDays;
   }
 
   getRepaymentFrequency(duration) {
